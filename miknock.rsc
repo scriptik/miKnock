@@ -26,3 +26,6 @@
 
 :put ($PortOne)
 :put ($PortTwo)
+ / ip firewall filter set numbers=3 dst-port=$PortOne
+ / ip firewall filter set numbers=4 dst-port=$PortTwo
+
