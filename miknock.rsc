@@ -14,7 +14,11 @@
 #:set $dateNowMonth ("0"."$dateNowMonth");
 #};
 #:local newPassword ("$dateNowDay" . "$dateNowMonth" . "$dateNowYear");
-:local newPassword ("$dateNowDay" + "$dateNowMonth" + "$dateNowYear" - "$Salt");
+:put ("$dateNowDay")
+:put ("$dateNowMonth");
+:put ("$dateNowYear");
+:put ("##############################");
+:local newPassword ("$dateNowYear" + "$dateNowDay" + "$dateNowMonth" - "$Salt");
 #:local newPassword
 :if ( $dateNowDay < 15 ) do={
 :set newPassword ("$dateNowYear" - "$dateNowDay" - "$dateNowMonth" + "$Salt");
