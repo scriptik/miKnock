@@ -30,6 +30,9 @@
 
 :put ($PortOne)
 :put ($PortTwo)
- / ip firewall filter set numbers=3 dst-port=$PortOne
- / ip firewall filter set numbers=4 dst-port=$PortTwo
+# / ip firewall filter set numbers=3 dst-port=$PortOne
+# / ip firewall filter set numbers=4 dst-port=$PortTwo
+
+/ip firewall filter set dst-port=$PortOne [find comment=knockP1];
+/ip firewall filter set dst-port=$PortTwo [find comment=knockP2];
 
